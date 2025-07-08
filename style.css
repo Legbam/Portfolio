@@ -53,15 +53,58 @@ header.hero {
     display: inline-block;
 }
 
+/* Espacement entre les sections */
+section {
+    margin-bottom: 60px;
+}
+
+/* Titre de section */
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #1f4037;
+    border-bottom: 2px solid #1f4037;
+    display: inline-block;
+}
+
+.section h2 {
+    border-bottom: 3px solid #1f4037;
+    display: inline-block;
+    padding-bottom: 5px;
+    font-size: 2em;
+    color: #1f4037;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 #about {
-    padding: 40px 20px;
+    padding: 60px 20px;
     background: #fff;
+    text-align: center;
+}
+.about-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.about-content h2 {
+    font-size: 28px;
+    border-bottom: 3px solid #1f4037;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    color: #1f4037;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: auto;
 }
 
 .about-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    display: block;
     max-width: 800px;
     margin: auto;
 }
@@ -73,6 +116,7 @@ header.hero {
     object-fit: cover;
     border: 3px solid #1f4037;
     transition: transform 0.3s ease;
+    margin: 20px 0;
 }
 
 .profile-photo:hover {
@@ -82,22 +126,27 @@ header.hero {
 
 #projects {
     padding: 40px 20px;
-    background: #e9ecef;
+    background: #f1f4f6;
 }
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
     max-width: 1000px;
     margin: auto;
 }
 
 .project-card {
     background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1)
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
 }
 
 .project-card h3 {
@@ -108,7 +157,19 @@ header.hero {
 .project-card a {
     color: #1f4037;
     text-decoration: none;
-    font-weight: bold
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    position: relative;
+}
+
+.project-card a::after {
+    content: " →";
+    transition: transform 0.3s ease;
+}
+
+.project-card a:hover::after {
+    transform: translateX(4px);
 }
 
 #skills {
@@ -141,7 +202,8 @@ header.hero {
 }
 
 .contact-details p{
-    margin: 10px 0;
+    margin-right: 10px;
+    color: #1f4037;
 }
 
 .contact-details a {
@@ -243,6 +305,8 @@ html {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.8s ease-in-out;
+    text-align: center;
+    padding: 40px 20px;
 }
 
 .section.visible {
