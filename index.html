@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio - Youpi</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Section Accueil -->
+        <header class= "hero">
+            <nav class="navbar">
+                <div class="logo">Mon Portfolio</div>
+                <div class="burger" onclick="toggleMenu()">☰</div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+                </ul>
+            </nav>
+            <h1>Bonjour, je suis Youpi</h1>
+            <p>Etudiant en informatique & développeur passionné, à létat civil je répond au nom de KPEEVEY Komlan Olympio</p>
+            <a href="CV.pdf" class="btn">Télécharger mon CV</a>
+            <a href="#contact" class="btn">Contactez-moi</a>
+        </header>
+
+        <!-- Section A propos -->
+        <section id="about" class="section">
+            <h2>À propos de moi</h2>
+            <div class="about-container">
+                <img src="C:\Users\GentlE\Projets\UPpro\Youpifolio\IMG-20250625-WA0002.jpg" alt="Photo de profil de Youpi" class="profile-photo">
+                <p>Je suis étudiant en informatique passionné par le développement web, Java, et curieux du monde du mobile. Je cherche à grandir à travers des stages, du freelance et l'alternance.</p>
+            </div>
+        </section>
+
+        <!-- Section Projets -->
+         <section id="projects" class="section">
+            <h2>Mes Projets</h2>
+            <div class="project-container">
+                <div class="project-card">
+                    <h3>Gestion d'utilsateurs en C#</h3>
+                    <p>Application WPF permettant d’ajouter, modifier, supprimer et afficher des utilisateurs via une base de données MySQL.</p>
+                    <a href="https://github.com/Legbam/gestion-utilisateurs" target="_blank">Voir sur GitHub</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Site vitrine HTML/CSS</h3>
+                    <p>Un site web responsive réalisé en HTML/CSS pour présenter une entreprise fictive.</p>
+                    <a href="https://github.com/Legbam/site-vitrine" target="_blank">Voir sur GitHub></a>"
+                </div>
+
+                <div class="project-card">
+                    <h3>Mini-système de bibliothèque (Java)</h3>
+                    <p>Console Java avec fichiers XML pour gérer les livres, auteurs et emprunteurs (avec validation DTD/XSD).</p>
+                    <a href="https://github.com/Legbam/bibliotheque-xml-java" target="_blank">Voir sur GitHub</a>"
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Compétences -->
+        <section id="skills" class="section">
+            <h2>Mes Compétences</h2>
+            <div class="skills-container">
+                <div class="skill">HTML/CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">Java</div>
+                <div class="skill">C#</div>
+                <div class="skill">SQL/MySQL</div>
+                <div class="skill">XML/XSL/XSD/DTD</div>
+                <div class="skill">Git/GitHub</div>
+                <div class="skill">WPF</div><br>
+                <div class="skill">Python (en apprentissage)</div>
+                <div class="skill">Développement mobile (en cours)</div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Tu peux me contacter pour toute opportunité de stage, mission freelance ou collaboration.</p>
+            <div class="contact-details">
+                <p><strong>Email: </strong>olympiokpv@gmail.com</p>
+                <p><strong>Téléphone: </strong>(+212) 06 87 54 90 15</p>
+                <p><strong>LinkedIn: </strong><a href="https://www.linkedin.com/in/Youpi Amegayibor-legba/" target="_blank">Youpi Amegayibor-legba</a></p>
+                <p><strong>GitHub: </strong><a href="https://github.com/Legbam" target="_blank">Legbam</a></p>
+            </div>
+        </section>
+
+
+        <script>
+            function toggleMenu() {
+                document.getElementById('navLinks').navLinks.classList.toggle('active');
+            }
+        </script>
+
+        <!-- Animation -->
+         <script>
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll(".section").forEach(section => {
+                observer.observe(section);
+            });
+         </script>
+    </body>
+</html>
